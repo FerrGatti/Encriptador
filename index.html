@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueris.css">
+    <link rel="shortcut icon" href="img/visu-securite.png">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+        <!-- Logo parte superior -->
+        <img src="img/visu-securite.png" alt="Logo" class="logo">
+        <!--Input-->
+        <section class="texto">
+            <label for="text-input"></label>
+            <textarea class="text-input" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui.." pattern="[a,z ]{2,254}"></textarea>
+        </section>
+        <!-- Botones -->
+        <article class="buttonSeccion">
+            <img class="alerta" src="img/Vector.png" alt="alerta">
+            <form action/>
+            <label for="texto place" class="alerta msg">Solo letras minusculas y sin acentos</label>
+            <button class="btn encriptar" type="button" value="Encriptar" id="btn-encriptar" onclick="mostrar()">Encriptar</button>
+            <button class="btn descencriptar" type="button" value="Desencriptar" id="btn-desencriptar">Desencriptar</button>
+            </form>
+        </article>
+        <!-- Rectangulo donde veremos el mensaje encriptado -->
+        <!-- Hidden -->
+        <aside class="seccion2" id="seccion2">
+            <div class="contenedorSalida">
+                <textarea class="text-input-salida" type="text" id="msg"></textarea>
+                <button type="cpbtn" class="btn copiar ocultar" id="btn-copiado" value="Copiar" onclick="copiarPortapapeles()">Copiar</button>
+            </div>
+                <div  id="text-out">
+                    <img class="person" src="img/pequeno-ladron-mascara-destruyendo-enorme-candado-seguro-robo-ciberdelincuencia-concepto-ataque-piratas-informaticos-hacker-o-intruso_87771-23568.webp" alt="">
+                    <p class="msjNoEncriptado">Ningun mensaje fue encriptado</p>
+                    <p class="insertTextEncriptado">Ingrese el texto que desee encriptar o desenciptar</p>
+                </div>
+        </aside>   
+    </main>
+    <footer>
+        <br><br>
+        <a href="https://www.linkedin.com/in/fer-gatti/" href="#" target="_blank" title="Perfil de LinkedIn"><img src="img/icons8-linkedin-100.png" alt="LinkedIn"</a>
+        <a href="https://github.com/FerrGatti" href="#" target="_blank" title="Perfil de Github"><img class="gitimg"src="img/icons8-github-squared-100.png" alt="Github"></a>
+        <p class="copyright">©Fernando Gatti</p>
+    </footer>
+    
+</body>
+<script src="proyect.js"></script>
+<script src="display.js"></script>
+</html>
+

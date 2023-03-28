@@ -1,0 +1,287 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+/*Reset*/
+:root{
+    --btn-bg-blue:#652493;
+    --btn-bg-white:#EBD4FB;
+}
+html{
+    background-color: var(--btn-bg-white);
+    overflow-x: hidden;
+    font-family: 'Inter';
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*
+
+Logo superior
+
+*/
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+}
+.buttonSeccion{
+    position: absolute;
+    bottom: 72px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    left: 240px;
+}
+.btn{
+    box-sizing: border-box;
+    /*auto layout*/
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Inter';
+    width: 15rem;
+    height: 3rem;
+    border-radius: 24px;
+    background: var(--btn-bg-blue);
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.descencriptar{
+    left: 616px;
+    background: #D8DFE8;
+    border: 1px solid var(--btn-bg-blue);
+    color: var(--btn-bg-blue);
+    
+}
+.btn:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 1.2px var(--btn-bg-blue);
+}
+.btn:active{
+    transform: scale(1);
+    filter: invert(25%);
+}
+/*
+
+Mensaje sobre los botones
+
+*/
+.alerta{
+    position: absolute;
+    bottom: 90px;
+    left: 1rem;
+}
+.msg{
+    left: 2.5rem;
+    bottom: 90px;
+    font-size: 0.7rem;
+}
+/*
+
+Input de texto 
+
+*/
+.texto{
+    min-height: 50px;
+}
+/*
+    Creando animacion para fade in/out de placeholder
+*/
+@keyframes myAnimation{
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    30%,
+    80%{
+        opacity: 0.5;
+    }
+}
+.text-input{
+    text-transform:lowercase;
+    position: absolute;
+    width: 36.1rem;
+    height: 50%;
+    left: 15rem;
+    top: 100px;
+    background-color: var(--btn-bg-white);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--btn-bg-blue);
+    overflow: auto;
+    resize: none;
+    animation: myAnimation 3s linear infinite alternate;
+ 
+}
+.text-input::placeholder{
+    color: var(--btn-bg-blue);
+    border: none;
+    
+}
+.text-input:focus{
+    outline: none;
+    animation: none;
+}
+.text-input:focus::placeholder{
+    color: transparent;
+    background-color: var(--btn-bg-white);
+}
+/*HIDDEN*/
+/*
+
+boton copiar
+
+*/
+.contenedorSalida{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#btn-copiado{
+    position: absolute;
+    box-sizing:border-box;
+    top: 82%;
+    left: auto;
+    right: 0.5rem;
+    background-color: #D8DFE8;
+    color: var(--btn-bg-blue);
+    width: 90%;
+}
+/*
+
+Imagen dentro de aside
+
+*/
+.person{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    
+    
+}
+.msjNoEncriptado{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    height: 20%;
+    color: var(--btn-bg-blue);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    
+}
+.insertTextEncriptado{
+    position: absolute;
+    width: 100%;
+    height: 20;
+    bottom: 100px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    align-self: stretch;
+    overflow: auto;
+    flex-grow: 0;
+    color: #495057;    
+}
+/*
+
+Salida de mensaje encriptado
+
+*/
+.seccion2{
+    position: absolute;
+    width: 20%;
+    height: 85%;
+    left: 58rem;
+    top: 2.5rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+    background-color: #fff;
+    margin-bottom: 0.62rem;
+}
+/*
+
+Input salida
+
+*/
+.text-input-salida{
+    position: absolute;
+    background-color: #FFF;
+    border: none;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: var(--btn-bg-blue);
+    margin: 2rem;
+    height: 70%;
+    width: 80%;
+    resize: none;
+    
+}
+.text-input-salida::placeholder{
+    color: var(--btn-bg-blue);
+    border: none;
+    
+}
+.text-input-salida:focus{
+    outline: none;
+}
+.text-input-salida:focus::placeholder{
+    color: transparent;
+    background-color: var(--btn-bg-white);
+}
+.text-input-salida::selection{
+    background-color: white;
+}
+/* Clase que vamos a utilizar con la funcion OcultarDisplay */
+.ocultar{
+    display: none;
+}
+.borde-text-salida{
+    background-color: black;
+}
+/* Footer */
+footer{
+    height: 2rem;
+    margin-top: auto;
+    bottom: 0;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+a>img{
+    width: 2.3rem;
+    /* position: absolute; */
+}
+.footer-text{
+    position:relative;
+    left: 35rem;
+}
